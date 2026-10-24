@@ -1,13 +1,15 @@
 class Solution {
     public int countDaysTogether(String arriveAlice, String leaveAlice, String arriveBob, String leaveBob) {
         int start = Math.max(toDay(arriveAlice), toDay(arriveBob));
-        int end = Math.min(toDay(leaveAlice),toDay(leaveBob));
+        int end = Math.min(toDay(leaveAlice), toDay(leaveBob));
 
         return Math.max(0, end - start + 1);
+
         
     }
+
     private int toDay(String date){
-        int [] daysInMonth = {
+        int[] daysInMonth = {
             31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
         };
 
